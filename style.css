@@ -1,0 +1,220 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container-1 {
+  background-image: url("images/jungle.jpg");
+  height: 98vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; 
+}
+.container-1 h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  letter-spacing: 1rem;
+  font-family: "Nothing You Could Do", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cloud img {
+  animation: cld calc(8s * var(--i)) linear infinite;
+  opacity: 0.6;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+@keyframes cld {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.container2 {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: black
+}
+.kapsayici {
+  width: 60%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+.single {
+  padding: 0 5rem;
+  display: grid;
+  place-content: center;
+  width: 2.2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  transition: 500ms ease-in-out width;
+}
+.single::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transition: 500ms ease-in-out background-color;
+}
+.single:nth-child(1) {
+  background-image: url(images/13.jpg);
+}
+.single:nth-child(2) {
+  background-image: url(images/2.jpg);
+}
+.single:nth-child(3) {
+  background-image: url(images/3.jpeg);
+}
+.single:nth-child(4) {
+  background-image: url(images/10.jpg);
+}
+.single:nth-child(5) {
+  background-image: url(images/6.jpg);
+}
+
+.content {
+  transform: rotate(-90deg);
+  transition: 500ms ease-in-out transform;
+  height: 70%;
+  align-items: center;
+}
+p {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 0;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7);
+  height: 0;
+  overflow: hidden;
+  transition: 500ms ease-in-out height,
+    500ms ease-in-out padding;
+}
+
+.content h2 {
+  text-align: center;
+  color: #f0f8ff;
+  text-shadow: 0 0 0.3rem rgba(0, 0, 0, 1);
+  transform: scale(3);
+  transition: 500ms ease-in-out transform;
+  font-family: "Loved by the King", cursive;
+ }
+
+.single:hover {
+  width: 2rem;
+}
+.single:hover::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.single:hover .content {
+  transform: rotate(0);
+}
+.single:hover h2 {
+  transform: scale(1);
+}
+.single:hover p {
+  height: 18rem;
+  border: 2px solid #db9106;
+  padding: 1rem;
+  font-family: "Nothing You Could Do", cursive;
+}
+
+.row {
+position: relative;
+border-radius: 10px;
+font-family: "Nothing You Could Do", cursive;
+}
+.row p {
+    font-size: 2rem;
+width: 10rem;
+height: 4rem;
+    box-shadow: 5px 5px 5px rgba(206, 198, 190, 0.5);
+    border-radius: 15px;
+    padding: 1rem;
+position: absolute;
+top: 30%;
+left: 30%;
+color: #fff;
+font-family: "Loved by the King", cursive;
+    text-align: center;
+  }
+
+.card-body{
+    text-align: center;
+}
+  footer {
+    padding: 7em 0; }
+  
+  .footer-07 {
+    background: black; }
+    .footer-07 p {
+      color: rgba(255, 255, 255, 0.3); 
+    }
+    .footer-07 .footer-heading {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 2rem; 
+    margin-top:2rem; 
+}
+      .footer-07 .footer-heading .logo {
+        color: #fff; 
+    }
+    .footer-07 .menu {
+      margin-bottom: 2rem; 
+    }
+      .footer-07 .menu a {
+        color: rgba(255, 255, 255, 0.6);
+        margin: 0 1rem;
+        letter-spacing: 1px; }
+
+h1.copyright {
+    color: #fff;
+    font-size: 1rem;
+}
+.row3 h1 {
+    color: #db9106;
+}
+  
+.last h6 {
+  text-align: center;
+  margin-top: 1rem;
+  color: red
+}
+
+.navbar {
+  font-family: "Nothing You Could Do", cursive;
+
+}
+#navbarNav ul li{
+margin-left:2rem;
+}
+
+.container .navbar-brand{
+  font-size: 2rem;
+  
+} 
+
+@media screen and (max-width: 750px) {
+  .container-1 {
+text-align: center;
+
+     }
+  h2{
+    text-align: center;
+  }
+} 
