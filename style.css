@@ -41,17 +41,24 @@
   }
 }
 .container2 {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+align-items: center;
   height: 100vh;
-  width: 100%;
+width: 100%;
   background-color: black
 }
+.container2 h2{
+  font-size: calc(1vw + 0.7vh + 0vmin);
+}
 .kapsayici {
-  width: 60%;
+  max-width: 60%;
   height: 70vh;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  
 }
 .single {
   padding: 0 5rem;
@@ -64,6 +71,7 @@
   overflow: hidden;
   position: relative;
   transition: 500ms ease-in-out width;
+ 
 }
 .single::before {
   content: "";
@@ -130,7 +138,7 @@ p {
 .single:hover p {
   height: 18rem;
   border: 2px solid #db9106;
-  padding: 1rem;
+  padding: 1.2rem;
   font-family: "Nothing You Could Do", cursive;
 }
 
